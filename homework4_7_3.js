@@ -3,10 +3,10 @@ const sailBoat = function (size) {
     const sailDim = Math.round (size / 8 * 5);
     const miniSailDim = Math.round (sailDim / 2) - 2;
     const sailBase = function (level) {
-        if (level == 1) {
+        if (level === 1) {
             return 1;
         }
-        if (level == 2) {
+        if (level === 2) {
             return sailBase (level - 1) + 1;
         }
         return sailBase (level - 1) + 2;
@@ -56,7 +56,7 @@ const sailBoat = function (size) {
             sailDrawer (level + 1);
         }
         else {
-            console.log (spacer (sailBase (sailDim) - sailBase (level - miniSailDim) ) + starer (sailBase (level - miniSailDim)) + spacer (1) + starer (sailBase (level)));
+            console.log (spacer (sailBase (sailDim) - sailBase (level - miniSailDim) - 1) + starer (sailBase (level - miniSailDim)) + spacer (1) + starer (sailBase (level)));
             sailDrawer (level + 1);
         }
     }
@@ -78,4 +78,4 @@ const sailBoat = function (size) {
     }
     hullDrawer (1);
 }
-sailBoat (20); //7-41
+sailBoat (15); //7-41

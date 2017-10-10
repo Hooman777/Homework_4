@@ -8,4 +8,3 @@ const revString = function (string) {
     }
     console.log(revComposer (counter - 1));
 }
-revString ('shima'+'vihan');
